@@ -1,14 +1,15 @@
 @extends('layouts.reservasi')
-@section('reservasi')
+@section('container')
     <div class="flex items-center min-h-screen lg:mt-20">
         <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">
             <div class="flex flex-col md:flex-row">
                 <div class="h-32 md:h-auto md:w-1/2">
-                    <img class="object-cover w-full h-full" src="{{ asset('asset/img/reservasi.jpg') }}" alt="img" />
+                    <img class="object-cover lg:w-full lg:mt-0 mt-6 lg:h-full" src="{{ asset('asset/img/reservasi.jpg') }}"
+                        alt="img" />
                 </div>
-                <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+                <div class="flex items-center justify-center p-6 sm:p-12 lg:mt-0 mt-44 md:w-1/2">
                     <div class="w-full">
-                        <h3 class="mb-11 text-2xl font-bold text-orange-600">Make Reservasi</h3>
+                        <h3 class="mb-11 flex justify-center text-3xl font-bold text-orange-600 font-h1">Make Reservasi</h3>
 
                         <div class="w-full bg-gray-200 rounded-full">
                             <div

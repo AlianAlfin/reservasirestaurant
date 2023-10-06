@@ -21,6 +21,17 @@
                             <div class="text-sm text-red-500">{{ $message }}</div>
                         @enderror
                     </div>
+                    <div class="sm:col-span-6">
+                        <label for="tag" class="block text-sm font-medium text-gray-700"> Tag
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" id="tag" name="tag"
+                                class="block w-full  appearance-none bg-white border rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5 @error('name') border-red-500 @enderror" />
+                        </div>
+                        @error('tag')
+                            <div class="text-sm text-red-500">{{ $message }}</div>
+                        @enderror
+                    </div>
                     <div class="sm:col-span-6 pt-4">
                         <label for="image" class="block text-sm font-medium text-gray-700"> image </label>
                         <div class="mt-1">
@@ -32,12 +43,22 @@
                         @enderror
                     </div>
                     <div class="sm:col-span-6 pt-4">
-                        <label for="slug" class="block text-sm font-medium text-gray-700">Slug</label>
+                        <label for="preview" class="block text-sm font-medium text-gray-700">Preview</label>
                         <div class="mt-1">
-                            <textarea id="slug" rows="3" name="slug"
-                                class="shadow-sm focus:ring-indigo-500 appearance-none bg-white border py-2 px-3 text-base leading-normal  focus:border-indigo-500 block w-full sm:text-sm  rounded-md @error('slug') border-red-500 @enderror"></textarea>
+                            <textarea id="preview" rows="3" name="preview"
+                                class="shadow-sm focus:ring-indigo-500 appearance-none bg-white border py-2 px-3 text-base leading-normal  focus:border-indigo-500 block w-full sm:text-sm  rounded-md @error('preview') border-red-500 @enderror"></textarea>
                         </div>
-                        @error('slug')
+                        @error('preview')
+                            <div class="text-sm text-red-500">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="sm:col-span-6 pt-4">
+                        <label for="desc" class="block text-sm font-medium text-gray-700">Description</label>
+                        <div class="mt-1">
+                            <textarea id="desc" rows="3" name="desc"
+                                class="shadow-sm focus:ring-indigo-500 appearance-none bg-white border py-2 px-3 text-base leading-normal  focus:border-indigo-500 block w-full sm:text-sm  rounded-md @error('desc') border-red-500 @enderror"></textarea>
+                        </div>
+                        @error('desc')
                             <div class="text-sm text-red-500">{{ $message }}</div>
                         @enderror
                     </div>

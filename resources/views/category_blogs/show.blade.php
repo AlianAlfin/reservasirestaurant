@@ -1,7 +1,7 @@
 @extends('layouts.navbar')
 @section('container')
     <!-- Text Header -->
-    <header class="w-full container mx-auto">
+    <header class="w-full container mx-auto lg:pt-[85px] pt-[74px]">
         <div class="flex flex-col items-center py-12">
             <p class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl">
                 Blog
@@ -21,34 +21,30 @@
 
         <!-- Post Section -->
         <section class="w-full md:w-2/3 flex flex-col items-center px-3">
-            @foreach ($categoryBlog->blogs as $blog)
+            @foreach ($categoryBlog as $categoryBlogs)
                 <article class="flex flex-col shadow my-4">
                     <!-- Article Image -->
                     <p class="hover:opacity-75">
-                        <img src="{{ Storage::url($blog->image) }}">
+                        <img src="{{ Storage::url($categoryBlogs->image) }}" class="w-full">
                     </p>
                     <div class="bg-white flex flex-col justify-start p-6">
-                        <div class="grid grid-cols-2">
-                            <div>
-                                <p class="text-3xl font-bold  hover:text-gray-700 pb-1">{{ $blog->title }}</p>
-                            </div>
-                            <div class="flex justify-end">
-                                <p class="text-base  hover:text-gray-700 pb-1">Realease :
-                                    {{ $blog->created_at }}</p>
-                            </div>
+                        <div>
+                            <p class="text-3xl font-bold  hover:text-gray-700 pb-1">{{ $categoryBlogs->title }}</p>
                         </div>
-
-                        <p class="text-base pb-4">{{ $categoryBlog->title }}
-                        </p>
-                        <p class="text-sm pb-8">
-                            By <a href="#" class="font-semibold hover:text-gray-800">{{ $blog->tag }}</a>
-                        </p>
-
-                        <p class="pb-3">{{ $categoryBlog->slug }}</p>
-                        <p class="pb-3">{{ $blog->description }}</p>
-                        <p class="pb-3">{{ $blog->second }}</p>
-                        <p class="pb-3">{{ $blog->last }}</p>
                     </div>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="flex justify-center">
+                            <p class="text-base  hover:text-gray-700 pb-1 ml-3">Realease :
+                                {{ $categoryBlogs->created_at }}</p>
+                        </div>
+                        <p class="text-sm pb-8 flex justify-center">
+                            By <a href="#" class="font-semibold hover:text-gray-800">{{ $categoryBlogs->tag }}</a>
+                        </p>
+                    </div>
+                    <div class="text-justify px-3">
+                        <p class="pb-3">{!! nl2br(e($categoryBlogs->desc)) !!}</p>
+                    </div>
+
                 </article>
             @endforeach
 

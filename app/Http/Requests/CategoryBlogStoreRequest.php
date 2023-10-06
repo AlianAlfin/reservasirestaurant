@@ -23,7 +23,9 @@ class CategoryBlogStoreRequest extends FormRequest
     {
         return [
             'title' => ['required'],
-            'slug' => ['required'],
+            'tag' => ['required'],
+            'desc' => ['required'],
+            'preview' => ['required'],
             'image' => ['required', 'image'],
         ];
     }

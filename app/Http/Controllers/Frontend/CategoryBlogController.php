@@ -16,6 +16,7 @@ class CategoryBlogController extends Controller
 
     public function show(CategoryBlog $categoryBlog)
     {
+        $categoryBlog = CategoryBlog::all();
         return view('category_blogs.show', compact('categoryBlog'));
     }
 }

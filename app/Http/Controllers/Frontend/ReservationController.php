@@ -10,6 +10,7 @@ use App\Rules\DateBetween;
 use App\Rules\TimeBetween;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ReservationController extends Controller
 {
@@ -69,6 +70,7 @@ class ReservationController extends Controller
         $reservation->save();
         $request->session()->forget('reservation');
 
-        return to_route('thankyou');
+        Alert::success('Success Book Table');
+        return to_route('reservations.step.one');
     }
 }

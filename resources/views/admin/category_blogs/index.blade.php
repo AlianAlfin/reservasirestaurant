@@ -22,10 +22,16 @@
                                 title
                             </th>
                             <th scope="col" class="px-6 py-3">
+                                Tag
+                            </th>
+                            <th scope="col" class="px-6 py-3">
                                 Image
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                slug
+                                Preview
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Description
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Opsi
@@ -42,10 +48,16 @@
                                     {{ $categoryBlog->title }}
                                 </td>
                                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    {{ $categoryBlog->tag }}
+                                </td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     <img src="{{ Storage::url($categoryBlog->image) }}" class="w-16 h-16 rounded">
                                 </td>
                                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {{ Str::limit($categoryBlog->slug, 15) }}
+                                    {{ Str::limit($categoryBlog->preview, 15) }}
+                                </td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    {{ Str::limit($categoryBlog->desc, 15) }}
                                 </td>
 
                                 <td class="px-6 py-4">

@@ -74,7 +74,7 @@ Route::middleware(['auth', 'admin'])->name('Admin.')->prefix('admin')->group(fun
 Route::get('/categories', [FrontendCategoryController::class, 'index'])->name('categories.index');
 Route::get('/category_blogs', [FrontendCategoryBlogController::class, 'index'])->name('category_blogs.index');
 Route::get('/categories/{category}', [FrontendCategoryController::class, 'show'])->name('categories.show');
-Route::get('/category_blogs/{categoryBlog}', [FrontendCategoryBlogController::class, 'show'])->name('category_blogs.show');
+Route::get('/category_blogs/{slug}', [FrontendCategoryBlogController::class, 'show'])->name('category_blogs.show');
 Route::get('/menus', [FrontendMenuController::class, 'index'])->name('menus.index');
 Route::get('/tables', [FrontendTableController::class, 'index'])->name('tables.index');
 Route::get('/reservations/step-one', [FrontendReservationController::class, 'stepOne'])->name('reservations.step.one');

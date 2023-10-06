@@ -53,6 +53,7 @@ class CategoryController extends Controller
         return view('admin.categories.show', compact('categories'));
     }
 
+   
     /**
      * Show the form for editing the specified resource.
      */

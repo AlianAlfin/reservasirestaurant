@@ -2,24 +2,28 @@
 
 @section('container')
     {{-- header --}}
-    <header class=" items-center justify-center h-screen mb-12 overflow-hidden">
+    <header class=" items-center justify-center h-auto mb-12 overflow-hidden lg:pt-[85px] pt-[74px]">
         {{-- <div class="relative z-30 p-5 text-2xl text-white bg-transparent bg-opacity-50 rounded-xl font-bold font-serif">
             Welcome to my site!
         </div> --}}
-        <video autoplay loop muted class=" z-10 w-auto lg:min-w-full lg:min-h-full max-w-none mt-11 sm:w-full md:w-full">
+        <video autoplay loop muted class=" z-10 w-auto lg:mt-3">
             <source src="{{ asset('asset/video/pixel.mp4') }}" type="video/mp4" />
         </video>
     </header>
     {{-- end header --}}
 
     {{-- about us --}}
-    <div class="mt-11 font-serif">
-        <div class="bg-slate-50 text-slate-800 grid lg:grid-cols-2 ">
+    <div class="lg:mt-11">
+        <div
+            class="shadow-lg bg-gradient-to-tr from-orange-600 via-orange-400 to bg-orange-200 text-white grid lg:grid-cols-2 grid-cols-1">
             <div class="lg:mt-20">
-                <h1 class="mt-24 px-7 lg:px-16 lg:pt-16 text-4xl font-semibold ">
+                <h1 class="mt-5 px-7 lg:px-16 lg:pt-16 text-3xl lg:text-4xl font-semibold font-h1 text-white lg:text-white">
                     Teppanyaki & Omakase Restaurant
                 </h1>
-                <p class="mt-11 px-7 lg:px-16 lg:pb-44 font-normal ">Opened its doors in the mid of August 2019, Kojin
+                <p class="mt-11 px-7 lg:px-16 lg:pb-44 font-normal font-p text-justify lg:text-slate-50">Opened its doors in
+                    the
+                    mid of August
+                    2019, Kojin
                     Teppanyaki Restaurant has been serving delectable Japanese cuisine for the ultimate dining experience in
                     Ubud. For authentic taste, we only use well-chosen and high quality ingredients, cooked in a classy
                     teppanyaki style to deliver the best of its creations in a dynamic and entertaining atmosphere. By
@@ -27,10 +31,10 @@
                     to bring people together for fun and authentic Japanese cuisine with our own modern twist.</p>
             </div>
             <div class="lg:mt-16">
-                <p class="px-0 py-24 lg:px-3 lg:py-36 "><iframe width="560" height="315"
+                <p class="px-0 py-12 lg:px-3 lg:py-36 "><iframe width="560" height="315"
                         src="https://www.youtube.com/embed/yVHhdhJTOf0" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe></p>
+                        allowfullscreen class="lg:w-[90%] w-[100%] lg:p-0 p-5"></iframe></p>
             </div>
 
         </div>
@@ -43,9 +47,11 @@
     <div class="mt-28 font-serif ">
         <div class="lg:px-20 md:px-6 px-4 py-12 lg:h-[1000px]">
             <div class="flex flex-col items-center justify-center">
-                <h1 class="lg:text-4xl text-3xl font-bold text-center text-gray-800 dark:text-white ">Hear from our clients
+                <h1 class="lg:text-4xl text-3xl font-bold text-center text-gray-800 dark:text-white font-h1">Hear From Our
+                    Clients
                 </h1>
-                <p class="text-base leading-6 mt-4 text-center text-gray-600 dark:text-white  2xl:w-2/5 ">Here is why you
+                <p class="text-base leading-6 mt-4 text-center text-gray-600 dark:text-white  2xl:w-2/5 font-p">Here is why
+                    you
                     should trust us with your work achievements</p>
             </div>
             <div class="w-full lg:flex items-center gap-6 mt-10">
@@ -57,7 +63,8 @@
                                 alt="commas" />
                         </div>
 
-                        <p class="text-base leading-6 text-gray-600 dark:text-white  mt-4">When our designs need an expert
+                        <p class="text-base leading-6 text-gray-600 dark:text-white font-p mt-4">When our designs need an
+                            expert
                             opinion or approval, I know I can rely on your agency Thank you for all your help-I will be
                             recommending you to everyone</p>
                         <div class="absolute bottom-0 -mb-4 ml-10">
@@ -67,7 +74,7 @@
                         </div>
                     </div>
                     <div class="flex items-center mt-7">
-                        <div class="w-12 h-12 border border-indigo-700 rounded-full flex items-center justify-center">
+                        <div class="w-12 h-12 border border-orange-500 rounded-full flex items-center justify-center">
                             <img src="https://i.ibb.co/R6WQhYj/Mask-Group.png" class="w-10 h-10 rounded-full"
                                 alt="profile" />
                         </div>
@@ -84,7 +91,8 @@
                             <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/testimonials-4-svg1.svg"
                                 alt="commas" />
                         </div>
-                        <p class="text-base leading-6 text-gray-600 dark:text-white  mt-4">When our designs need an expert
+                        <p class="text-base leading-6 text-gray-600 dark:text-white font-p mt-4">When our designs need an
+                            expert
                             opinion or approval, I know I can rely on your agency Thank you for all your help-I will be
                             recommending you to everyone</p>
                         <div class="absolute bottom-0 -mb-4 ml-10">
@@ -94,7 +102,7 @@
                         </div>
                     </div>
                     <div class="flex items-center mt-7">
-                        <div class="w-12 h-12 border border-indigo-700 rounded-full flex items-center justify-center">
+                        <div class="w-12 h-12 border border-orange-500 rounded-full flex items-center justify-center">
                             <img src="https://i.ibb.co/C6bwf12/Mask-Group.png" class="w-10 h-10 rounded-full"
                                 alt="profile" />
                         </div>
@@ -111,44 +119,45 @@
     {{-- end testimoni --}}
 
 
-    <div class="w-full  -mt-96">
+    <div class="w-full  lg:-mt-96 " id="category">
         {{-- categories --}}
-        <h1 class="uppercase font-extrabold text-4xl flex justify-center lg:pt-11"> <span class="text-slate-800">
+        <h1 class="uppercase font-extrabold lg:text-4xl text-2xl lg:mt-0 mt-20 flex justify-center lg:pt-11 font-h1"> <span
+                class="text-slate-800">
                 International Food</span></h1>
         <div
-            class="2xl:container flex justify-center items-center w-full 2xl:mx-auto lg:px-20 md:py-12 md:px-6 py-9 px-4 lg:mt-11">
-            <div class="w-80 md:w-auto grid lg:grid-cols-3 grid-cols-1 lg:gap-8 gap-6">
+            class=" 2xl:container flex justify-center items-center w-full 2xl:mx-auto lg:px-20 md:py-12 md:px-6 py-9 px-4 lg:mt-11">
+            <div class=" w-80 md:w-auto grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-6">
                 @foreach ($categories as $category)
-                    <div class="relative group">
-                        <img class="lg:block hidden w-full object-cover h-full rounded-lg"
+                    <div class="relative group  hover:border-none">
+                        <img class="lg:block hidden w-full object-cover h-[450px]"
                             src="{{ Storage::url($category->image) }}" />
-                        <img class="lg:hidden md:block hidden w-full object-cover rounded-lg"
+                        <img class="lg:hidden md:block hidden w-full object-cover h-[450px]"
                             src="{{ Storage::url($category->image) }}" />
-                        <img class="w-full md:hidden rounded-lg" src="{{ Storage::url($category->image) }}" />
+                        <img class="w-full object-cover md:hidden h-[450px]" src="{{ Storage::url($category->image) }}" />
 
                         <div
                             class="opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full">
                         </div>
                         <div
                             class="absolute top-0 left-0 w-full h-full flex justify-start items-end opacity-0 hover:opacity-100 p-8">
-                            <p class="font-semibold text-2xl leading-6 text-white">{{ $category->name }}</p>
+                            <p class="font-semibold text-2xl leading-6 text-white font-h1">{{ $category->name }}</p>
                         </div>
                     </div>
 
                     <div
-                        class="lg:px-6 lg:py-0 md:py-16 md:px-24 py-16 px-6 flex flex-col justify-center items-center text-center bg-gray-100 dark:bg-gray-800">
+                        class=" lg:px-6 lg:py-0 md:py-16 md:px-24 py-16 px-6 flex flex-col justify-center items-center text-center bg-gray-100 dark:bg-gray-800">
                         <h2
-                            class="dark:text-white font-semibold lg:text-4xl text-3xl lg:leading-10 leading-9 text-gray-800 lg:w-full md:w-7/12 w-full">
+                            class="font-h1 dark:text-white font-semibold lg:text-4xl text-3xl lg:leading-10 leading-9 text-gray-800 lg:w-full md:w-7/12 w-full">
                             {{ $category->name }}</h2>
                         <p
-                            class="dark:text-gray-300 font-medium text-base leading-6 text-gray-600 mt-4 lg:w-full md:w-7/12 w-full">
+                            class="font-p dark:text-gray-300 font-medium text-base leading-6 text-gray-600 mt-4 lg:w-full md:w-7/12 w-full">
                             {{ $category->description }}</p>
                         <a href="{{ route('categories.show', $category->id) }}"
-                            class="dark:bg-white dark:text-gray-800 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-orange-600 text-white text-base leading-4 bg-orange-500 lg:px-10 py-4 lg:w-auto w-72 mt-16">Discover
+                            class="font-h1 dark:bg-white dark:text-gray-800 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-orange-600 text-white text-base leading-4 bg-orange-500 lg:px-10 py-4 lg:w-auto w-72 mt-16">Discover
                             More</a>
                     </div>
 
-                    <div class="relative group">
+                    {{-- <div class="relative group">
                         <img class="lg:block hidden w-full object-cover h-[400px] rounded-lg"
                             src="{{ Storage::url($category->image) }}" />
                         <img class="lg:hidden md:block hidden w-full object-cover rounded-lg"
@@ -162,15 +171,15 @@
                             class="absolute top-0 left-0 w-full h-full flex justify-start items-end opacity-0 hover:opacity-100 p-8">
                             <p class="font-semibold text-2xl leading-6 text-white">{{ $category->name }}</p>
                         </div>
-                    </div>
+                    </div> --}}
                 @endforeach
             </div>
         </div>
         {{-- end categories --}}
 
         {{-- display menu --}}
-        <div class="m-20">
-            <h1 class="uppercase font-extrabold text-xl">more like this</h1>
+        {{-- <div class="m-20">
+            <h1 class="uppercase font-extrabold text-xl font-h1">more like this</h1>
 
             <div id="indicators-carousel" class="relative w-full mt-11" data-carousel="static">
                 <!-- Carousel wrapper -->
@@ -246,7 +255,7 @@
                     </span>
                 </button>
             </div>
-        </div>
+        </div> --}}
         {{-- end display menu --}}
 
     </div>

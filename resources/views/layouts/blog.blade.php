@@ -26,6 +26,88 @@
 </head>
 
 <body class="bg-white font-family-karla">
+    <!-- Implement the overlay menu -->
+
+    <div id="menu"
+        class="fixed z-50 w-0 h-0 flex justify-center items-center bg-orange-700 opacity-0 duration-700 font-h1">
+        <a href="javascript:void(0)"
+            class="fixed top-6 right-8 text-white hover:text-amber-500 text-7xl font-semibold duration-300"
+            onclick="closeMenu()">&times;</a>
+        <div class="flex flex-col text-white text-center text-xl font-light space-y-3">
+            <a class="hover:text-amber-500 duration-300 font-bold" href="/">Home</a>
+            <a class="hover:text-amber-500 duration-300 font-bold" href="/#category">Category</a>
+            <a class="hover:text-amber-500 duration-300 font-bold" href="/menu">Menu</a>
+            <a class="hover:text-amber-500 duration-300 font-bold" href="{{ route('tables.index') }}">Table</a>
+            <a class="hover:text-amber-500 duration-300 font-bold" href="{{ route('category_blogs.index') }}">Blog</a>
+            {{-- <a class="hover:text-amber-500 duration-300 font-bold" href="#contact">Contact</a> --}}
+            <a class="hover:text-amber-500 duration-300 font-bold" href="{{ route('reservations.step.one') }}">Book
+                Now</a>
+        </div>
+    </div>
+
+
+    {{-- alert --}}
+    <div>
+        @if (session()->has('danger'))
+            <div class="flex items-center p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
+                role="alert">
+                <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span class="sr-only">Info</span>
+                <div>
+                    <span class="font-medium">{{ session()->get('danger') }} !!</span>
+                </div>
+            </div>
+        @endif
+        @if (session()->has('success'))
+            <div class="flex items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800"
+                role="alert">
+                <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span class="sr-only">Info</span>
+                <div>
+                    <span class="font-medium">{{ session()->get('success') }} !!</span>
+                </div>
+            </div>
+        @endif
+        @if (session()->has('warning'))
+            <div class="flex items-center p-4 mb-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300 dark:border-yellow-800"
+                role="alert">
+                <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span class="sr-only">Info</span>
+                <div>
+                    <span class="font-medium">{{ session()->get('warning') }} !!</span>
+                </div>
+        @endif
+    </div>
+    {{-- end alert --}}
+
+    <!-- Other elements -->
+    <nav class="pt-3">
+        <div class="">
+            {{-- <h1 class="font-extrabold text-2xl font-sans ml-11  items-center text-slate-700">iNi Vie <span
+                    class="text-orange-500">
+                    Hospitality </span></h1> --}}
+            <img src="{{ asset('asset/logo/1.png') }}" class="lg:h-[100px] lg:w-[100px] lg:ml-11 h-[70px]"
+                alt="">
+        </div>
+        <div class="container lg:-mt-[70px] -mt-[52px] flex justify-end items-center">
+            <p><a href="javascript:void(0)" onclick="openMenu()"
+                    class="lg:px-4 px-2 py-2 bg-orange-500 hover:bg-orange-600 text-xl text-white duration-300">
+                    <span class="text-2xl ">&#9776;</span>
+                </a></p>
+        </div>
+    </nav>
     @yield('container')
     <footer class="w-full border-t bg-white pb-12">
         <div class="relative w-full flex items-center invisible md:visible md:pb-12" x-data="getCarouselData()">

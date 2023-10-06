@@ -31,7 +31,9 @@ class CategoryBlogController extends Controller
 
         CategoryBlog::create([
             'title' => $request->title,
-            'slug' => $request->slug,
+            'tag' => $request->tag,
+            'desc' => $request->desc,
+            'preview' => $request->preview,
             'image' => $image,
         ]);
 
@@ -65,7 +67,9 @@ class CategoryBlogController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'slug' => 'required',
+            'preview' => 'required',
+            'tag' => 'required',
+            'desc' => 'required',
         ]);
 
         $image = $categoryBlog->image;
@@ -76,8 +80,10 @@ class CategoryBlogController extends Controller
 
         $categoryBlog->update([
             'title' => $request->title,
-            'slug' => $request->slug,
+            'preview' => $request->preview,
             'image' => $image,
+            'tag' => $request->tag,
+            'desc' => $request->desc,
         ]);
         return to_route('Admin.category_blogs.index')->with('success', 'Success update data');
     }
