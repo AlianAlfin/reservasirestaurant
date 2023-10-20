@@ -11,8 +11,9 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <!-- Implement the overlay menu -->
-    <nav class="fixed w-full z-50 bg-white bg-opacity-50 lg:pb-11 pb-8">
+    <nav class="fixed w-full z-50 lg:pb-11 pb-8">
         <div id="menu"
             class="fixed z-50 w-0 h-0 flex justify-center items-center bg-orange-500 opacity-0 duration-700 font-h1">
             <a href="javascript:void(0)"

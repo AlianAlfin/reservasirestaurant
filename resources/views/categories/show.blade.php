@@ -32,7 +32,7 @@
 
     <button
         class="dark:bg-white dark:hover:bg-gray-400 dark:hover:text-gray-100 dark:text-gray-800 sm:w-auto w-full lg:ml-11 mt-8 text-base justify-between focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 focus:outline-none hover:bg-orange-600 font-medium leading-none text-white py-4 px-8 bg-orange-500 flex items-center">
-        <a href="{{ route('categories.index') }}">Back</a>
+        <a href="/#category">Back</a>
         <div class="ml-2 mt-0.5">
             <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/hero-VIII-svg1.svg" alt="arrow">
             <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/hero-VIII-svg1dark.svg"

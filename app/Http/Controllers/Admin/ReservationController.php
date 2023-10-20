@@ -40,7 +40,7 @@ class ReservationController extends Controller
             return back()->with('warning', 'Please Choose Table base on guest');
         }
 
-        // $request_date = Carbon::parse($request->reservation_date);
+        $request_date = Carbon::parse($request->reservation_date);
         foreach ($table->reservations as $res) {
             if ($res->reservation_date) {
                 return back()->with('warning', 'This table is reserved for this date');

@@ -19,9 +19,10 @@ class ReservationController extends Controller
         $reservation = $request->session()->get('reservation');
         $min_date = Carbon::today();
         $max_date = Carbon::now()->addWeek();
-        $earliestTime = Carbon::createFromTimeString('00:00:00');
-        $lastTime = Carbon::createFromTimeString('16:59:00');
-        return view('reservations.step-one', compact('reservation', 'min_date', 'max_date', 'earliestTime', 'lastTime'));
+        // $earliestTime = Carbon::createFromTimeString('00:00:00');
+        // $lastTime = Carbon::createFromTimeString('16:59:00');
+        // $last = Carbon::createFromTimeString('19:59:00');
+        return view('reservations.step-one', compact('reservation', 'min_date', 'max_date'));
     }
 
     public function StoreStepOne(Request $request)
@@ -32,7 +33,7 @@ class ReservationController extends Controller
             'email' => ['required'],
             'telp' => ['required'],
             'reservation_date' => ['required', 'date', new DateBetween],
-            'reservation_time' => ['required', new TimeBetween],
+            'reservation_time' => ['required'],
             'guestNumber' => ['required'],
         ]);
 
@@ -52,8 +53,8 @@ class ReservationController extends Controller
     public function stepTwo(Request $request)
     {
         $reservation = $request->session()->get('reservation');
-        $res_table_ids = Reservation::orderBy('reservation_date')->get()->filter(function ($value) use ($reservation) {
-            return $value->reservation_date == $reservation->reservation_date;
+        $res_table_ids = Reservation::orderBy('reservation_time')->get()->filter(function ($value) use ($reservation) {
+            return $value->reservation_time == $reservation->reservation_time;
         })->pluck('table_id');
         $tables = Table::where('status', TableStatus::Avaliable)->where('guestNumber', '>=', $reservation->guestNumber)
             ->whereNotIn('id', $res_table_ids)->get();

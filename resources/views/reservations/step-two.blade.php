@@ -25,7 +25,7 @@
                                 <div class="mt-1">
                                     <select id="table_id" name="table_id"
                                         class="form-multiselect block w-full mt-1  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5">
-                                        @foreach ($tables as $table)
+                                        @foreach ($tables->sortBy('location') as $table)
                                             <option value="{{ $table->id }}">
                                                 {{ $table->name }} {{ $table->location }} ( {{ $table->guestNumber }}
                                                 Guest

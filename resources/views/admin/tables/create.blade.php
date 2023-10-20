@@ -51,7 +51,7 @@
                         <label for="image" class="block text-sm font-medium text-gray-700"> image </label>
                         <div class="mt-1">
                             <input type="file" id="image" name="image"
-                                class="block w-full  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5 @error('image') border-red-500 @enderror" />
+                                class="block w-full  appearance-none bg-white border rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5 @error('image') border-red-500 @enderror" />
                         </div>
                         @error('image')
                             <div class="text-sm text-red-500">{{ $message }}</div>

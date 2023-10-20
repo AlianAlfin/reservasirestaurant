@@ -6,8 +6,8 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="https://rollsticker.id/wp-content/uploads/2023/01/logo-perusahaan.png"
-                            class="block h-9 w-auto fill-current text-gray-800" alt="">
+                        <img src="{{ asset('asset/logo/1.png') }}" class="block h-16 w-auto fill-current text-gray-800"
+                            alt="">
                     </a>
                 </div>
 

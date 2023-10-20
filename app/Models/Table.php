@@ -9,18 +9,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Table extends Model
 {
-    protected $fillable = [
-        'name',
-        'guestNumber',
-        'status',
-        'location',
-        'image',
+    protected $guarded = [
+        'id'
     ];
 
-    protected $casts = [
-        'status' => TableStatus::class,
-        'location' => TableLocation::class,
-    ];
+    //    protected $casts = [
+    //         'status' => TableStatus::class,
+    //         'location' => TableLocation::class,
+    //     ]; 
 
     public function reservations()
     {

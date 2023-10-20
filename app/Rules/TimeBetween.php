@@ -15,13 +15,13 @@ class TimeBetween implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        $pickupDate = Carbon::parse($value);
-        $pickupTime = Carbon::createFromTime($pickupDate->hour, $pickupDate->minute, $pickupDate->second);
+        // $pickupDate = Carbon::parse($value);
+        // $pickupTime = Carbon::createFromTime($pickupDate->hour, $pickupDate->minute, $pickupDate->second);
 
-        $earliestTime = Carbon::createFromTimeString('00:00:00');
-        $lastTime = Carbon::createFromTimeString('16:59:00');
-        if ($pickupTime->between($earliestTime, $lastTime)) {
-            $fail('Please Choose the time between 17:00-23:00');
-        }
+        // $earliestTime = Carbon::createFromTimeString('23:00:00');
+        // $lastTime = Carbon::createFromTimeString('16:59:00');
+        // if ($pickupTime->between($lastTime, $earliestTime)) {
+        //     $fail('Please Choose the time between 17:00 & 20:00');
+        // }
     }
 }

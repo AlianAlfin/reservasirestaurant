@@ -28,6 +28,9 @@
                                 Date
                             </th>
                             <th scope="col" class="px-6 py-3">
+                                Time
+                            </th>
+                            <th scope="col" class="px-6 py-3">
                                 Table
                             </th>
                             <th scope="col" class="px-6 py-3">
@@ -51,7 +54,10 @@
                                     {{ $reservation->email }}
                                 </td>
                                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {{ $reservation->reservation_date }} {{ $reservation->reservation_time }}
+                                    {{ $reservation->reservation_date }}
+                                </td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    {{ $reservation->reservation_time }}
                                 </td>
                                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     {{ $reservation->table->name }} ( {{ $reservation->table->location }} )

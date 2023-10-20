@@ -66,18 +66,23 @@
                             <div class="text-sm text-red-500">{{ $message }}</div>
                         @enderror
                     </div>
+
                     <div class="sm:col-span-6 pt-4">
                         <label for="reservation_time" class="block text-sm font-medium text-gray-700">Reservation Time
                         </label>
                         <div class="mt-1">
-                            <input type="time" id="reservation_time" name="reservation_time"
-                                class="block w-full  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5" />
+                            <select id="reservation_time" name="reservation_time"
+                                class="form-multiselect block w-full mt-1  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5">
+                                <option value="17:00 - 19:00">17:00 - 19:00</option>
+                                <option value="20:00 - 22:00">20:00 - 22:00</option>
+                            </select>
                         </div>
                         @error('reservation_time')
                             <div class="text-sm text-red-500">{{ $message }}</div>
                         @enderror
                     </div>
-                    <div class="sm:col-span-6 pt-4 pt-4">
+
+                    <div class="sm:col-span-6 pt-4">
                         <label for="guestNumber" class="block text-sm font-medium text-gray-700"> Guest Number </label>
                         <div class="mt-1">
                             <input type="number" id="guestNumber" name="guestNumber"
@@ -87,7 +92,8 @@
                             <div class="text-sm text-red-500">{{ $message }}</div>
                         @enderror
                     </div>
-                    <div class="sm:col-span-6 pt-4 pt-4">
+
+                    <div class="sm:col-span-6 pt-4">
                         <label for="status" class="block text-sm font-medium text-gray-700">Table</label>
                         <div class="mt-1">
                             <select id="table_id" name="table_id"
@@ -102,6 +108,7 @@
                             </select>
                         </div>
                     </div>
+
                     <div class=" mt-6 p-4">
                         <button type="submit"
                             class="px-4 py-2 bg-indigo-400 hover:bg-indigo-700 rounded-lg text-white">Save</button>

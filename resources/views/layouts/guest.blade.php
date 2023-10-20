@@ -20,8 +20,7 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
         <div>
             <a href="/">
-                <img src="https://rollsticker.id/wp-content/uploads/2023/01/logo-perusahaan.png"
-                    class="w-20 h-20 fill-current text-gray-500" alt="">
+                <img src="{{ asset('asset/logo/1.png') }}" class="w-36 h-36 fill-current text-gray-500" alt="">
             </a>
         </div>
 

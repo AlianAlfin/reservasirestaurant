@@ -1,6 +1,6 @@
-@extends('layouts.reservasi')
+@extends('layouts.navbar')
 @section('container')
-    <div class="flex items-center min-h-screen lg:mt-20">
+    <div class="flex items-center min-h-screen lg:mt-20 lg:pt-[85px] pt-[74px]">
         <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">
             <div class="flex flex-col md:flex-row">
                 <div class="h-32 md:h-auto md:w-1/2">
@@ -88,11 +88,14 @@
                                     Time
                                 </label>
                                 <div class="mt-1">
-                                    <input type="time" id="reservation_time" name="reservation_time"
-                                        min="{{ $earliestTime->format('TH:i:s') }}"
-                                        max="{{ $lastTime->format('TH:i:s') }}"
+                                    {{-- <input type="text" id="reservation_time" name="reservation_time"
                                         value="{{ $reservation->reservation_time ?? '' }}"
-                                        class="block w-full  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5" />
+                                        class="block w-full  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5" /> --}}
+                                    <select id="reservation_time" name="reservation_time"
+                                        class="form-multiselect block w-full mt-1  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5">
+                                        <option value="17:00 - 19:00">17:00 - 19:00</option>
+                                        <option value="20:00 - 22:00">20:00 - 22:00</option>
+                                    </select>
                                 </div>
                                 @error('reservation_time')
                                     <div class="text-sm text-red-500">{{ $message }}</div>
@@ -102,9 +105,19 @@
                                 <label for="guestNumber" class="block text-sm font-medium text-gray-700"> Guest Number
                                 </label>
                                 <div class="mt-1">
-                                    <input type="number" id="guestNumber" name="guestNumber"
-                                        value="{{ $reservation->guestNumber ?? '' }}"
-                                        class="block w-full  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5" />
+                                    <select id="guestNumber" name="guestNumber"
+                                        class="form-multiselect block w-full mt-1  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
                                 </div>
                                 @error('guestNumber')
                                     <div class="text-sm text-red-500">{{ $message }}</div>

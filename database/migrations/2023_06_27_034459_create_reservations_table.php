@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('telp');
             $table->date('reservation_date');
-            $table->time('reservation_time');
+            $table->string('reservation_time');
             $table->unsignedBigInteger('table_id');
             $table->integer('guestNumber');
             $table->timestamps();
