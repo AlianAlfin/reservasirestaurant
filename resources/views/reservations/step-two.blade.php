@@ -1,4 +1,4 @@
-@extends('layouts.reservasi')
+@extends('layouts.navbar')
 @section('container')
     <div class="flex items-center min-h-screen">
         <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">

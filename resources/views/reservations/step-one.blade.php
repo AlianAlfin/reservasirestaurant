@@ -107,16 +107,11 @@
                                 <div class="mt-1">
                                     <select id="guestNumber" name="guestNumber"
                                         class="form-multiselect block w-full mt-1  appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal  sm:text-sm sm:leading-5">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
+                                        @for ($i = 1; $i <= $maxGuestNumber; $i++)
+                                            <option value="{{ $i }}">
+                                                {{ $i }}
+                                            </option>
+                                        @endfor
                                     </select>
                                 </div>
                                 @error('guestNumber')
